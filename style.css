@@ -827,13 +827,13 @@
             .btn{
                 display:block;
                 
-                padding: 12px 0px; /* More padding for better touch targets */
+                padding: 12px 24px; /* More padding for better touch targets */
                 margin: 0 100px; /* Reset margin */
             }
             .sbtn{
                 display:block;
                 margin: 15px 100px; /* Reset margin */
-                padding: 12px 0px; /* More padding for better touch targets */
+                padding: 12px 24px; /* More padding for better touch targets */
             }
         }
 
