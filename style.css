@@ -441,20 +441,84 @@
             
         }
 
-        .skills-list img:hover{
+        .skills-list img{
             background: linear-gradient(167deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(5, 100, 181, 1) 41%, rgba(150, 203, 224, 1) 100%, rgba(0, 212, 255, 1) 100%);
 
             transform: translateY(-10px); /* Slightly lift skills list on hover */
             transition: transform 0.3s ease; /* Smooth transition */
-            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow on hover */
+            box-shadow: 0 0px 20px rgba(208, 46, 46, 0.05); /* Subtle shadow on hover */
         }
-        .skills-list .circle{
-            background-color: #cae0e9;
-            border-radius: 50px;
-            /* Space between skills */
-            width: 70px;
+
+        .skills-list img:hover{
+            transform: translateY(-15px); /* Slightly more lift on hover */
+            box-shadow: 0 0px 18px rgb(222, 11, 11); /* More pronounced shadow on hover */
+             /* More pronounced shadow on hover */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
             
         }
+        /* i need to show the paragraph tag when hovering happen in img tag */
+        .skills-list p {    
+            display: none; /* Hide paragraph by default */
+            color: var(--dark-color);
+            
+        }
+
+        .skills-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            position: relative;
+            text-align: center;
+        }
+
+        .skills-list li p {
+            position: absolute;
+            top: -50px; /* adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+            font-size: 14px;
+            }
+
+        .skills-list li:hover p {
+            opacity: 1;
+            }
+
+        /* show the paragraph slightly in front of  respective img 
+        i need the paragraph where the image is placed*/
+
+       
+        
+        
+        
+        
+
+        .skills-list img:hover + p {
+            display: block; /* Show paragraph when hovering over image */
+            transition: opacity 0.3s ease; /* Smooth transition for text visibility */
+        }
+        .skills-list .circle {
+            width: 70px; /* Adjusted width for better visibility */
+            height: 70px; /* Adjusted height for better visibility */
+            border-radius: 50%; /* Circular shape */
+            background-color: #cae0e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
 
         .skills-list .resize{
             width: 70px; /* Adjusted width for better visibility */
@@ -580,7 +644,7 @@
 
         .skill-item:hover {
             transform: translateY(-8px); /* Subtle lift */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* More pronounced shadow on hover */
+            box-shadow: 0 8px 20px rgba(2, 27, 170, 0.614); /* More pronounced shadow on hover */
         }
 
         .skill-item img {
@@ -714,98 +778,130 @@
             letter-spacing: 0.3px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar .container {
-                flex-direction: column;
-                padding: 15px 20px;
+        /*home page responsive design navbar menu */
+        
+        .navbar .toggle-btn {
+            display: none; /* Hide toggle button by default */
+            font-size: 1.8rem; /* Larger toggle button */
+            color: var(--white-color);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .navbar .nav-links {
+            display: flex; /* Flexbox for horizontal layout */
+            align-items: center; /* Center items vertically */
+            gap: 20px; /* Space between links */
+        }
+        
+
+        
+    
+        /* Responsive Design for Navbar */
+        @media (max-width: 768px) { 
+            .navbar .toggle-btn {
+                display: block; /* Show toggle button on smaller screens */
             }
 
-            .navbar ul {
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                margin-top: 20px;
+            .navbar .nav-links {
+                display: none; /* Hide links by default on smaller screens */
+                flex-direction: column; /* Stack links vertically */
+                position: absolute; /* Position links absolutely */
+                top: 60px; /* Below the navbar */
+                left: 0;
+                width: 100%; /* Full width */
+                background-color:var(--secondary-color); /* Background color for dropdown */
+                padding: 20px 0; /* Padding for dropdown */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for dropdown */
+                z-index: 999; /* Ensure dropdown is above other content */
             }
 
-            .navbar ul li {
-                margin: 8px 0;
+            .navbar .nav-links.active {
+                display: flex; /* Show links when active */
             }
 
-            .navbar ul li a {
-                display: block;
-                padding: 12px;
-                width: 100%;
-            }
-
-            #hero h1 {
-                font-size: 2.8rem;
-            }
-
-            #hero p {
-                font-size: 1.2rem;
-            }
-
-            section {
-                padding: 70px 0;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            .project-grid, .skills-grid {
-                grid-template-columns: 1fr; /* Single column on smaller screens */
-            }
-
-            .project-item, .skill-item {
-                max-width: 380px; /* Constrain width for single column items */
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .contact-form {
-                padding: 35px 25px;
-            }
-
-            .contact-form input[type="text"],
-            .contact-form input[type="email"],
-            .contact-form textarea {
-                padding: 12px;
-            }
-
-            .contact-form .btn-submit {
-                padding: 14px;
-                font-size: 1.1rem;
+            .navbar .nav-links li {
+                margin-bottom: 15px; /* Space between links */
             }
         }
+
+
+      
+        
+
        
 
-        @media (max-width: 480px) {
-            .navbar .logo {
-                font-size: 1.7rem;
+        /* Responsive Design for About Section */
+        @media (max-width: 768px) { 
+            .about-container {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+                gap: 50px; /* Reduced gap for smaller screens */
+                padding: 0 20px; /* Reduced padding for smaller screens */
             }
 
-            #hero h1 {
-                font-size: 2.2rem;
+            #about img {
+                width: 300px; /* Smaller profile picture on mobile */
+                height: 300px;
             }
 
-            #hero p {
-                font-size: 1rem;
+            #about h2 {
+                font-size: 2.5rem; /* Slightly smaller heading on mobile */
             }
 
-            .btn {
-                padding: 12px 25px;
-                font-size: 1rem;
+            #about p {
+                font-size: 1.1rem; /* Slightly smaller text on mobile */
+            }
+        }
+
+        /* Responsive Design for Internship Section */
+        @media (max-width: 768px) { 
+            .internship-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+                padding: 0 20px; /* Reduced padding for smaller screens */
+            }
+
+            .internship-item {
+                padding: 20px; /* Reduced padding for smaller screens */
+            }
+
+            .internship-img img {
+                width: 50%; /* Full width on mobile */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
+        /* Responsive Design for Projects Section */
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+                padding: 0 20px; /* Reduced padding for smaller screens */
+            }
+
+            .project-item {
+                max-width: 100%; /* Full width on mobile */
+            }
+
+            .project-item img {
+                height: 200px; /* Shorter images on mobile */
+            }
+        }
+
+        /* Responsive Design for Skills Section */
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Slightly wider min column */
+                padding: 0 20px; /* Reduced padding for smaller screens */
+            }
+
+            .skill-item {
+                padding: 20px; /* Reduced padding for smaller screens */
             }
 
             .skill-item img {
-                width: 65px;
-                height: 65px;
-            }
-
-            .skill-item h3 {
-                font-size: 1.1rem;
+                width: 80px; /* Smaller icons on mobile */
+                height: 80px;
             }
         }
    

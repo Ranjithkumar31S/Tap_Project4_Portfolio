@@ -15,7 +15,8 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">MyPortfolio</a>
-            <ul>
+            <button class="toggle-btn" aria-label="Menu" onclick="displayMenu()">&#9776;</button>
+            <ul class="nav-links">
                 
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -35,14 +36,14 @@
         <div class="container">
             <h1>Hi, I'm Ranjithkumar S</h1>
             <p>A passionate Web Developer building beautiful and functional web experiences.</p>
-            <a href="" class="btn" download="">View Resume</a>
+            <a href="./Working-Resume.pdf" class="btn" download>View Resume</a>
             <a href="#contact" class="sbtn">Get in Touch</a>
            
         </div>
         <div class="social-icons">
-                <a href="" target="_blank" class="social-icon"><img src="./assets/github.png" alt="GitHub"></a>
-                <a href="" target="_blank" class="social-icon"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
-                <a href="" target="_blank" class="social-icon"><img src="./assets/instagram.png" alt="Instagram"></a>
+                <a href="https://github.com/Ranjithkumar31S" target="_blank" class="social-icon"><img src="./assets/github.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/ranjithkumar-s-523881363" target="_blank" class="social-icon"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/im_.ranjithkumar/" target="_blank" class="social-icon"><img src="./assets/instagram.png" alt="Instagram"></a>
         </div>
         
             
@@ -153,11 +154,15 @@
                 </div> 
                 <div class="internship-skills">
                     <ul class="skills-list">
-                        <li><img src="./assets/java.png" class="circle"></li>
+                        <li><img src="./assets/java.png" class="circle">
+                        <p>Java</p></li>
                      
-                        <li><img src="./assets/html.png" class="resize"></li>
-                        <li><img src="./assets/css.png" class="resize"></li>
-                        <li><img src="./assets/mysql.png" class="circle"></li>
+                        <li><img src="./assets/html.png" class="resize">
+                        <p>HTML</p></li>
+                        <li><img src="./assets/css.png" class="resize">
+                        <p>CSS</p></li>
+                        <li><img src="./assets/mysql.png" class="circle">
+                        <p>MySQL</p></li>
                     </ul>
                 </div>
                   
@@ -197,7 +202,24 @@
         </div>
     </footer>
 
-
+    <script>
+        // Function to toggle the display of the menu
+        function displayMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            navLinks.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+        }
+        // Close the menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const toggleBtn = document.querySelector('.toggle-btn');
+                navLinks.classList.remove('active');
+                toggleBtn.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
