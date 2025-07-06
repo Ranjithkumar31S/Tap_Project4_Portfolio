@@ -827,13 +827,13 @@
             .btn{
                 display:block;
                 
-                padding: 12px 20px; /* More padding for better touch targets */
+                padding: 12px auto; /* More padding for better touch targets */
                 margin: 0 100px; /* Reset margin */
             }
             .sbtn{
                 display:block;
                 margin: 15px 100px; /* Reset margin */
-                padding: 12px 20px; /* More padding for better touch targets */
+                padding: 12px auto; /* More padding for better touch targets */
             }
         }
 
@@ -884,7 +884,7 @@
             .internship-skills .skills-list {
                padding: 30px; /* Reduced padding for smaller screens */
             
-               gap:40px;
+               gap:auto;
             }
         }
 
