@@ -883,10 +883,23 @@
             }
             .internship-skills {
                 /* Reduced padding for smaller screens */
-                padding: 0 20px;
-                gap: 20px; /* Reduced gap for smaller screens */
-               
+                padding: 0 10px; /* Reduced padding for smaller screens */
+                
             }
+            /* .skills-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            padding: 0;
+        } */
+            .internship-skills .skills-list {
+                
+                padding: 0 10px; /* Reduced padding for smaller screens */
+                gap: 15px; /* Reduced gap for smaller screens */
+                
+                
+            }
+            
         }
 
         /* Responsive Design for Projects Section */
