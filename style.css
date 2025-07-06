@@ -881,10 +881,11 @@
                 width: 50%; /* Full width on mobile */
                 height: auto; /* Maintain aspect ratio */
             }
-            .internship-skills .skills-list {
-               padding: 30px; /* Reduced padding for smaller screens */
-            
-               gap:auto;
+            .internship-skills {
+                /* Reduced padding for smaller screens */
+                padding: 0 20px;
+                gap: 20px; /* Reduced gap for smaller screens */
+               
             }
         }
 
