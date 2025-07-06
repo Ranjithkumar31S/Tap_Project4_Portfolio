@@ -823,6 +823,18 @@
             .navbar .nav-links li {
                 margin-bottom: 15px; /* Space between links */
             }
+
+            .btn{
+                display:block;
+                
+                padding: 12px 0px; /* More padding for better touch targets */
+                margin: 0 100px; /* Reset margin */
+            }
+            .sbtn{
+                display:block;
+                margin: 15px 100px; /* Reset margin */
+                padding: 12px 0px; /* More padding for better touch targets */
+            }
         }
 
 
@@ -868,6 +880,10 @@
             .internship-img img {
                 width: 50%; /* Full width on mobile */
                 height: auto; /* Maintain aspect ratio */
+            }
+            .internship-skills .skills-list {
+               
+               gap:40px;
             }
         }
 
