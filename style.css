@@ -828,11 +828,11 @@
                 display:block;
                 
                 padding: 12px 24px; /* More padding for better touch targets */
-                margin: 0 auto; /* Reset margin */
+                margin: 0; /* Reset margin */
             }
             .sbtn{
                 display:block;
-                margin: 15px auto; /* Reset margin */
+                margin: 15px 0; /* Reset margin */
                 padding: 12px 24px; /* More padding for better touch targets */
             }
         }
