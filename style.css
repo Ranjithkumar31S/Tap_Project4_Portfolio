@@ -42,6 +42,22 @@
 
 
         }
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        
+        #hero, #about, #projects, #skills, #internship, #contact, .footer {
+            position: relative;
+            z-index: 1;
+        }
 
         a {
             text-decoration: none;
@@ -133,7 +149,7 @@
         #hero {
             position: relative; /* Needed for absolute positioning of video */
             overflow: hidden; /* Ensures video doesn't spill out */
-            color: var(--white-color);
+            /* color: var(--white-color); */
             height: 100vh; /* Full viewport height */
            
             display: flex;
@@ -141,7 +157,7 @@
             justify-content: center;
             padding-top: 80px; /* Offset for fixed navbar */
             text-align: center;
-            background-color: var(--dark-color); /* Fallback background for video */
+            /* background-color: var(--dark-color); */
         
         }
 
@@ -160,22 +176,14 @@
            
         }
 
-        Video Overlay
-        #hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            
-            z-index: 1; /* Puts overlay between video and content */
-        }
+      
 
         /* Hero content (text and button) */
         #hero .container {
             position: relative; /* Ensures content is above video and overlay */
             z-index: 2;
             padding-bottom: 20px; /* Added some bottom padding */
+            
             
         }
 
@@ -200,6 +208,7 @@
             margin-right: auto;
             animation: fadeInUp 1s ease-out;
             font-weight: 300; /* Lighter weight for descriptor */
+            color:#cae0e9;
         }
 
          #hero{
@@ -266,6 +275,12 @@
             box-shadow: 0 0px 20px white;
 
         }
+        h2{
+             background: #3F5EFB;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(152, 83, 183, 1) 46%, rgba(252, 70, 107, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
         .sbtn {
             display: inline-block;
@@ -308,7 +323,7 @@
 
         /* About Section */
         #about {
-            background-color: var(--light-color);
+            /* background-color: var(--light-color); */
             padding: 90px 0;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
             
@@ -342,10 +357,14 @@
             
         }
         
-        #about h2 {
+        h2 {
             font-size: 2.8rem; /* Larger heading */
             margin-bottom: 60px;
             font-weight: 800;
+        }
+
+        #about p{
+            color:white;
         }
 
 
@@ -389,14 +408,14 @@
        
         /* Internship Section */
         #internship {
-            background-color: var(--white-color);
+            /* background-color: var(--white-color); */
             padding: 90px 0;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
         }
-        #internship h2 {
-            font-size: 2.8rem; /* Larger heading */
-            margin-bottom: 60px;
-            font-weight: 800;
+        #internship h3 {
+             color: var(--primary-color);
+             font-size: 1.5rem; /* Larger heading */
+           
         }
         .internship-grid {
             display: grid;
@@ -419,21 +438,27 @@
             transform: scale(1.05); /* Slightly larger on hover */
             transition: transform 0.3s ease; /* Smooth transition */
             box-shadow: none;
+             /* Subtle shadow on hover */
 
         }
 
         .internship-item {
-            background-color: var(--light-color);
+            color:white;
             padding: 30px 20px; /* More padding */
             border-radius: 8px; /* Consistent rounded corners */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+            box-shadow: 0px 4px 12px rgb(71, 6, 251);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             border: 1px solid rgba(0, 0, 0, 0.03); /* Very light border */
         }
 
+        .internship-item:hover {
+            transform: translateY(-8px); /* Subtle lift */
+            box-shadow: 0 8px 25px rgb(2, 27, 170); /* More pronounced shadow on hover */
+        }
+
         .internship-skills .skills-list {
-            margin-top: 40px;
+            margin-top: 90px;
             display: flex;
             gap: 50px; 
             justify-content: center; /* Center skills horizontally */
@@ -451,7 +476,7 @@
 
         .skills-list img:hover{
             transform: translateY(-15px); /* Slightly more lift on hover */
-            box-shadow: 0 0px 18px rgb(222, 11, 11); /* More pronounced shadow on hover */
+            box-shadow: 0 0px 18px rgb(222, 11, 120); /* More pronounced shadow on hover */
              /* More pronounced shadow on hover */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
             
@@ -539,9 +564,10 @@
 
         /* Projects Section */
         #projects {
-            background-color: var(--white-color);
+            /* background-color: var(--white-color); */
             padding: 90px 0;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
+            
         }
 
         #projects h2 {
@@ -555,13 +581,14 @@
             grid-template-columns: repeat(auto-fit, minmax(290px, 2fr)); /* Slightly wider min column */
             gap: 35px; /* Increased gap */
             justify-content: center;
+            margin-bottom:15px;
         }
 
         .project-item {
-            background-color: var(--light-color);
+            /* background-color: var(--light-color); */
             border-radius: 8px; /* More subtle rounded corners */
             overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* More subtle shadow */
+            box-shadow: 0px 4px 12px rgb(71, 6, 251);
             transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
             position: relative;
             cursor: pointer;
@@ -579,7 +606,12 @@
 
         .project-item:hover {
             transform: translateY(-19px); /* Slightly less lift */
-            box-shadow: 0 20px 30px rgba(6, 74, 212, 0.18); /* More refined shadow on hover */
+            box-shadow: 0 12px 25px rgb(71, 6, 251); /* More pronounced shadow on hover */
+           
+        }
+
+        .project-item:hover p {
+            color:white;
         }
 
         .project-item:hover img {
@@ -613,7 +645,7 @@
 
         /* Skills Section */
         #skills {
-            background-color: var(--light-color);
+            /* background-color: var(--light-color); */
             padding: 90px 0;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
         }
@@ -633,9 +665,9 @@
         }
 
         .skill-item {
-            background-color: var(--white-color);
+            /* background-color: var(--white-color); */
             padding: 30px 20px; /* More padding */
-            border-radius: 8px; /* Consistent rounded corners */
+            border-radius: 50px; /* Consistent rounded corners */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Subtle shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
@@ -644,7 +676,12 @@
 
         .skill-item:hover {
             transform: translateY(-8px); /* Subtle lift */
-            box-shadow: 0 8px 20px rgba(2, 27, 170, 0.614); /* More pronounced shadow on hover */
+            box-shadow: 0 8px 25px rgb(2, 27, 170); /* More pronounced shadow on hover */
+            
+        }
+        .skill-item:hover h3{
+            color: white;    /* Change text color on hover */
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Subtle glow effect */
         }
 
         .skill-item img {
@@ -662,14 +699,14 @@
 
         .skill-item h3 {
             font-size: 1.2rem; /* Slightly larger skill name */
-            color: var(--dark-color);
+            color:#cae0e9;
             font-weight: 600;
             margin-bottom: 0;
         }
 
         /* Get in Touch Form */
         #contact {
-            background: linear-gradient(to right, var(--gradient-end), var(--gradient-start)); /* Using professional gradient */
+            /* background: linear-gradient(to right, var(--gradient-end), var(--gradient-start)); */
             color: var(--white-color);
             padding: 90px 0;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
