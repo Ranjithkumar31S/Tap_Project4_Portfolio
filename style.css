@@ -956,20 +956,24 @@
         }
 
         /* Responsive Design for Skills Section */
-
         @media (max-width: 768px) {
+            /*i need 2 columns in skills section */
             .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Slightly wider min column */
-                padding: 0px; /* Reduced padding for smaller screens */
+                grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+                padding: 0 20px; /* Reduced padding for smaller screens */
             }
 
             .skill-item {
-                padding: 15px; /* Reduced padding for smaller screens */
+                padding: 20px; /* Reduced padding for smaller screens */
             }
+
+           
 
             .skill-item img {
                 width: 80px; /* Smaller icons on mobile */
                 height: 80px;
             }
         }
+
+    
    
