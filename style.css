@@ -960,11 +960,11 @@
         @media (max-width: 768px) {
             .skills-grid {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Slightly wider min column */
-                padding: 0 20px; /* Reduced padding for smaller screens */
+                padding: 0px; /* Reduced padding for smaller screens */
             }
 
             .skill-item {
-                padding: 20px; /* Reduced padding for smaller screens */
+                padding: 15px; /* Reduced padding for smaller screens */
             }
 
             .skill-item img {
