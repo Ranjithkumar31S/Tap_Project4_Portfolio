@@ -14,7 +14,7 @@
             --light-color: #ECEFF1; /* Light blue-grey for subtle backgrounds */
             --white-color: #FFFFFF;
             --text-color: #424242; /* Soft dark grey for main text */
-            --heading-color: #212121; /* Almost black for headings */
+            --heading-color: #6c6a6ab5; /* Almost black for headings */
             --gradient-start: #2C3E50; /* Deep blue-grey for gradients */
             --gradient-end: #34495E; /* Slightly lighter blue-grey for gradients */
         }
@@ -170,7 +170,7 @@
             height: 100%;
             object-fit: cover; /* Ensures video covers the entire section */
             z-index: 0; /* Places video behind content */
-            opacity: 0.9; /* Slightly transparent for better text readability */
+            opacity: 0; /* Slightly transparent for better text readability */
             
       
            
@@ -704,6 +704,92 @@
             margin-bottom: 0;
         }
 
+        
+        #experience h2{
+            margin-bottom:5px;
+        }
+        #experience p{
+            color:white;
+        }
+        .experience h3{
+            color: var(--primary-color);
+            
+        }
+        .experience{
+            display:grid;
+            grid-template-columns: 550px 500px;
+            gap:20px;
+            justify-content: center;
+            position: relative;
+            text-align: left;
+            margin-top: 80px;
+            
+            
+            
+        }
+        .intern, .secondary{
+            height:fit-content;
+        }
+        .ug{
+            margin-top: 200px;
+        }
+        .pe{
+            margin-top: 230px;
+        }
+        .ug,.pe,.intern,.secondary{
+            
+            padding:20px;
+            border-radius:25px; 
+            width:450px;
+            box-shadow: 0px 4px 12px rgb(71, 6, 251);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .line{
+            
+            position: absolute;
+            left:735px;
+            background: #004D40;
+            height: 815px;
+            width:5px;
+
+        }
+        .circle-1{
+            position: absolute;
+            left:722px;
+            top:70px;
+            background: #04b5a0;
+            height: 30px;
+            width: 30px;
+            border-radius: 25px;
+        }
+        .circle-2{
+            position: absolute;
+            left:722px;
+            top:280px;
+            background: #04b5a0;
+            height: 30px;
+            width: 30px;
+            border-radius: 25px;
+        }
+        .circle-3{
+            position: absolute;
+            left:722px;
+            top:500px;
+            background: #04b5a0;
+            height: 30px;
+            width: 30px;
+            border-radius: 25px;
+        }
+        .circle-4{
+            position: absolute;
+            left:722px;
+            top:700px;
+            background: #04b5a0;
+            height: 30px;
+            width: 30px;
+            border-radius: 25px;
+        }
+
         /* Get in Touch Form */
         #contact {
             /* background: linear-gradient(to right, var(--gradient-end), var(--gradient-start)); */
@@ -729,7 +815,7 @@
         }
 
         .contact-form {
-            background-color: rgba(255, 255, 255, 0.98); /* Slightly less transparent */
+             /* Slightly less transparent */
             padding: 45px; /* More padding */
             border-radius: 10px; /* Consistent rounded corners */
             max-width: 550px; /* Tighter max-width */
@@ -745,7 +831,7 @@
         .contact-form label {
             display: block;
             margin-bottom: 10px; /* More margin */
-            color: var(--dark-color);
+            color: #c5c7c7;
             font-weight: 600;
             font-size: 1.05rem; /* Slightly larger label */
         }
@@ -760,13 +846,14 @@
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
-            background-color: var(--white-color);
+            background-color: #446d6a55;
             color: var(--text-color);
         }
 
         .contact-form input[type="text"]:focus,
         .contact-form input[type="email"]:focus,
         .contact-form textarea:focus {
+            
             border-color: var(--primary-color);
             box-shadow: 0 0 0 4px rgba(0, 121, 107, 0.2); /* Shadow with primary color */
             outline: none;
@@ -903,39 +990,29 @@
             }
         }
 
-        /* Responsive Design for Internship Section */
+        /* Responsive Design for Experience Section */
         @media (max-width: 768px) { 
-            .internship-grid {
+            .experience {
                 grid-template-columns: 1fr; /* Single column on smaller screens */
-                padding: 0 20px; /* Reduced padding for smaller screens */
-            }
-
-            .internship-item {
-                padding: 20px; /* Reduced padding for smaller screens */
-            }
-
-            .internship-img img {
-                width: 50%; /* Full width on mobile */
-                height: auto; /* Maintain aspect ratio */
-            }
-            .internship-skills {
                 /* Reduced padding for smaller screens */
-                padding: 0 10px; /* Reduced padding for smaller screens */
+            }
+
+            .experience div{
+                margin-top: 15px;
                 
             }
-            /* .skills-list {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            padding: 0;
-        } */
-            .internship-skills .skills-list {
-                
-                padding: 0 10px; /* Reduced padding for smaller screens */
-                gap: 15px; /* Reduced gap for smaller screens */
-                
-                
+            #e-content{
+                margin-left:100px;
+                max-width: fit-content;
             }
+            .line{
+                left:50px;
+            }
+            .circle-1,.circle-2,.circle-3,.circle-4{
+                left:38px;
+            }
+
+        
             
         }
 
