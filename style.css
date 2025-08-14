@@ -1130,7 +1130,16 @@
                 display: block;
             }
             #info{
-                width:380px;
+                width:400px;
+            }
+            #info h3{
+                font-size:1rem;
+            }
+            #info p{
+                font-size:0.8rem;
+            }
+            #info a{
+                font-size:0.8rem;
             }
             
             .contact-form{
