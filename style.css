@@ -1002,14 +1002,15 @@
                 
             }
             #e-content{
-                margin-left:100px;
-                max-width: fit-content;
+                margin-left:80px;
+                width: 350px;
             }
             .line{
-                left:50px;
+                left:30px;
+                height:850px;
             }
             .circle-1,.circle-2,.circle-3,.circle-4{
-                left:38px;
+                left:18px;
             }
 
         
