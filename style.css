@@ -1003,7 +1003,7 @@
             }
             #e-content{
                 margin-left:80px;
-                width: 350px;
+                width: 280px;
             }
             .line{
                 left:30px;
@@ -1050,6 +1050,14 @@
             .skill-item img {
                 width: 80px; /* Smaller icons on mobile */
                 height: 80px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .contact-form{
+                
+                padding:0px;
+                
             }
         }
 
