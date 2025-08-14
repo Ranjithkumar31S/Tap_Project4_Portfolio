@@ -774,7 +774,7 @@
         .circle-3{
             position: absolute;
             left:722px;
-            top:500px;
+            top:490px;
             background: #04b5a0;
             height: 30px;
             width: 30px;
@@ -794,20 +794,79 @@
         #contact {
             /* background: linear-gradient(to right, var(--gradient-end), var(--gradient-start)); */
             color: var(--white-color);
-            padding: 90px 0;
+            margin: 0px;
             font-family: 'Poppins', sans-serif; /* Changed font for hero text */
+        }
+        .c-container-1{
+            display: flex;
+            
+            
+        }
+        .contact-info{
+            text-align: left;
+            width:450px;
+            margin-top: 60px;
+            
+        }
+
+        #info{
+            background: #4e6f6d55;
+            border-radius:15px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+         
+            align-items:center;
+            justify-content: center;
+            padding:15px 20px;
+            margin-top: 20px;
+           
+        }
+        .img{
+           
+            background: #004D40;
+            width:60px;
+            height:60px;
+            border-radius:50px;
+            padding:15px;
+            
+        }
+        .img img{
+            width:30px;
+            height:30px;
+            
+            
+        }
+        #info h3,p{
+            margin:0px;
+        }
+        #info h3{
+            color:#04b5a0;
+        }
+        .c-info a{
+            font-size:1rem;
+            color:white;
+
+        }
+            
+
+            
+        
+        #info:hover{
+            
+            
+        
         }
 
         #contact h2 {
             font-size: 2.8rem;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             color: var(--white-color);
             font-weight: 800;
         }
 
         #contact p {
-            font-size: 1.3rem; /* Slightly larger text */
-            margin-bottom: 50px;
+            font-size: 1.1rem; /* Slightly larger text */
+           
             max-width: 650px; /* Tighter width */
             margin-left: auto;
             margin-right: auto;
@@ -818,7 +877,7 @@
              /* Slightly less transparent */
             padding: 45px; /* More padding */
             border-radius: 10px; /* Consistent rounded corners */
-            max-width: 550px; /* Tighter max-width */
+            width: 550px; /* Tighter max-width */
             margin: auto;
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* More significant shadow */
             text-align: left;
@@ -1007,11 +1066,24 @@
             }
             .line{
                 left:30px;
-                height:850px;
+                height:970px;
             }
             .circle-1,.circle-2,.circle-3,.circle-4{
                 left:18px;
             }
+            .circle-1{
+                top:100px;
+            }
+            .circle-2{
+                top:330px;
+            }
+            .circle-3{
+                top:600px;
+            }
+            .circle-4{
+                top:850px;
+            }
+           
 
         
             
@@ -1054,9 +1126,14 @@
         }
 
         @media(max-width: 768px) {
+            .c-container-1{
+                display: block;
+            }
             .contact-form{
                 
                 padding:0px;
+                width:auto;
+                margin-top: 40px;
                 
             }
         }
