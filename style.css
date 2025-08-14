@@ -1129,6 +1129,9 @@
             .c-container-1{
                 display: block;
             }
+            .contact-info{
+                width:auto;
+            }
             .contact-form{
                 
                 padding:0px;
