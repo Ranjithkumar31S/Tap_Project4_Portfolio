@@ -1129,9 +1129,10 @@
             .c-container-1{
                 display: block;
             }
-            .contact-info{
-                width:280px;
+            #info{
+                width:380px;
             }
+            
             .contact-form{
                 
                 padding:0px;
