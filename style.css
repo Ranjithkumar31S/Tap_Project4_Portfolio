@@ -1131,6 +1131,7 @@
             }
             #info{
                 width:350px;
+                margin-right: 20px;
             }
             #info h3{
                 font-size:1rem;
