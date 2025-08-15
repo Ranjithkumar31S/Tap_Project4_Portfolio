@@ -1130,8 +1130,8 @@
                 display: block;
             }
             #info{
-                width:350px;
-                margin-right: 20px;
+                width:auto;
+                margin:30px;
             }
             #info h3{
                 font-size:1rem;
